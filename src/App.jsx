@@ -8,6 +8,7 @@ function App() {
     const editor=grapesjs.init({
       container:"#editor"
     });
+    setEditor(editor);
   },[])
 
   return (
