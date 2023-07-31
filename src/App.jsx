@@ -1,7 +1,8 @@
 import grapesjs  from "grapesjs"
 import { useState,useEffect } from "react"
-import Plugin from "grapesjs-preset-webpage";
 import "./styles/main.scss";
+import WebPlugin from "grapesjs-preset-webpage";
+import FormPlugin from "grapesjs-plugin-forms";
 
 function App() {
   const [editor,setEditor]=useState(null);
@@ -9,9 +10,10 @@ function App() {
   useEffect(()=>{
     const editor=grapesjs.init({
       container:"#editor",
-      plugins:[Plugin],
+      plugins:[WebPlugin,FormPlugin],
       pluginsOpts:{
-        [Plugin]:{}
+        WebPlugin:{},
+        FormPlugin:{},
       },
 
     });
