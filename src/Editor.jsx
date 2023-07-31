@@ -3,6 +3,7 @@ import grapesjs from 'grapesjs';
 import grapesjsMJML from 'grapesjs-mjml'
 import React, { useEffect } from 'react';
 
+
 export const Editor = () => {
     useEffect(() => {
         const editor = grapesjs.init({
@@ -22,10 +23,11 @@ export const Editor = () => {
             </mj-body>
         </mjml>
         `)
+ 
     }, []);
     return (
         <div>
-            <div id="email-editor" />
+            <div id="email-editor" />       
         </div>
     );
 };
