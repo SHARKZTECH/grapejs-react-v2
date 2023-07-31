@@ -3,6 +3,7 @@ import { useState,useEffect } from "react"
 import "./styles/main.scss";
 import WebPlugin from "grapesjs-preset-webpage";
 import FormPlugin from "grapesjs-plugin-forms";
+import plugin from "grapesjs-blocks-basic";
 
 function App() {
   const [editor,setEditor]=useState(null);
@@ -10,10 +11,11 @@ function App() {
   useEffect(()=>{
     const editor=grapesjs.init({
       container:"#editor",
-      plugins:[WebPlugin,FormPlugin],
+      plugins:[plugin,WebPlugin,FormPlugin],
       pluginsOpts:{
         WebPlugin:{},
         FormPlugin:{},
+        plugin:{flexGrid: true },
       },
 
     });
