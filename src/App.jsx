@@ -1,6 +1,7 @@
-import { grapesjs } from "grapesjs"
+import grapesjs  from "grapesjs"
 import { useState,useEffect } from "react"
 import Plugin from "grapesjs-preset-webpage";
+import "./styles/main.scss";
 
 function App() {
   const [editor,setEditor]=useState(null);
@@ -12,7 +13,7 @@ function App() {
       pluginsOpts:{
         [Plugin]:{}
       },
-      
+
     });
     setEditor(editor);
   },[])
